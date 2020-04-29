@@ -20,8 +20,8 @@ df.columns = headers
 
 
 # Drop missing values in price
-df = df.replace("?", numpy.NaN) # Fix formatting throughout.
-df = df.dropna(subset=["price"], axis=0)
+df.replace("?", numpy.NaN, inplace=True) # Fix formatting throughout.
+df.dropna(subset=["price"], axis=0, inplace = True)
 
 #Question Two: Check Header names
 print(df.columns)
